@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nex Store - Hubungi Kami</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b86614",
+                        "primary-dark": "#8a4d0f",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#211911",
+                        "surface-light": "#f3ede7",
+                        "surface-dark": "#362b22",
+                        "text-main": "#1b140e",
+                        "text-muted": "#97734e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white transition-colors duration-200">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-surface-light dark:border-b-surface-dark bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-6 lg:px-10 py-3">
+            <div class="flex items-center gap-4">
+                <div class="size-8 text-primary">
+                    <svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                            fill="currentColor"></path>
+                        <path clip-rule="evenodd"
+                            d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-tight">Nex Store
+                </h2>
+            </div>
+            <div class="hidden lg:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                    <a class="text-text-main dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="index.html">Beranda</a>
+                    <a class="text-text-main dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="catalog.html">Katalog</a>
+                    <a class="text-text-main dark:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="about.html">Tentang Kami</a>
+                    <a class="text-primary text-sm font-bold leading-normal" href="contact.html">Hubungi Kami</a>
+                </nav>
+            </div>
+            <button class="lg:hidden text-text-main dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+        <main class="flex-1 flex flex-col items-center">
+            <section class="w-full bg-surface-light dark:bg-surface-dark py-12 md:py-16">
+                <div class="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
+                    <h1
+                        class="hero-title text-2xl sm:text-3xl md:text-5xl font-bold text-text-main dark:text-white mb-4 animate-on-scroll">
+                        Hubungi Kami</h1>
+                    <p class="text-text-muted dark:text-gray-400 text-lg max-w-2xl mx-auto animate-on-scroll delay-100">
+                        Punya pertanyaan tentang katalog produk atau ingin konsultasi kebutuhan kantor Anda? Tim
+                        Nex Store siap membantu.
+                    </p>
+                </div>
+            </section>
+            <section class="w-full max-w-[1280px] px-4 md:px-10 py-12 md:py-20 animate-on-scroll delay-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div
+                        class="contact-form order-2 lg:order-1 bg-white dark:bg-surface-dark p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-sm border border-surface-light dark:border-gray-800 animate-on-scroll delay-300">
+                        <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Kirim Pesan</h3>
+                        <form class="flex flex-col gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-text-main dark:text-white mb-2"
+                                    for="name">Nama Lengkap</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-text-main dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="name" placeholder="Masukkan nama Anda" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-text-main dark:text-white mb-2"
+                                    for="email">Alamat Email</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-text-main dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="email" placeholder="nama@perusahaan.com" type="email" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-text-main dark:text-white mb-2"
+                                    for="subject">Subjek</label>
+                                <select
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-text-main dark:text-white focus:border-primary focus:ring-primary shadow-sm"
+                                    id="subject">
+                                    <option>Pertanyaan Umum</option>
+                                    <option>Permintaan Penawaran (Quotation)</option>
+                                    <option>Konsultasi Desain</option>
+                                    <option>Layanan Purna Jual</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-text-main dark:text-white mb-2"
+                                    for="message">Pesan</label>
+                                <textarea
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-text-main dark:text-white focus:border-primary focus:ring-primary shadow-sm h-32 resize-none"
+                                    id="message"
+                                    placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3.5 px-6 rounded-lg transition-colors shadow-md mt-2"
+                                type="button">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                    <div class="order-1 lg:order-2 flex flex-col gap-8">
+                        <div class="animate-on-scroll delay-400">
+                            <h3 class="text-2xl font-bold text-text-main dark:text-white mb-6">Informasi Kontak</h3>
+                            <div class="flex flex-col gap-6">
+                                <div class="contact-info-item flex items-start gap-3 sm:gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-surface-light dark:bg-background-dark rounded-full flex items-center justify-center text-primary shrink-0">
+                                        <span class="material-symbols-outlined">location_on</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-text-main dark:text-white text-lg">Alamat Showroom
+                                        </h4>
+                                        <p class="text-text-muted dark:text-gray-400 mt-1 leading-relaxed">
+                                            Jl. Industri Raya No. 45, Kawasan Niaga Terpadu,<br />
+                                            Jakarta Selatan, DKI Jakarta 12430
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-surface-light dark:bg-background-dark rounded-full flex items-center justify-center text-primary shrink-0">
+                                        <span class="material-symbols-outlined">call</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-text-main dark:text-white text-lg">Telepon &amp;
+                                            WhatsApp</h4>
+                                        <p class="text-text-muted dark:text-gray-400 mt-1">
+                                            +62 21 555 0198 (Office)<br />
+                                            +62 812 3456 7890 (WhatsApp)
+                                        </p>
+                                        <p class="text-xs text-text-muted/70 dark:text-gray-500 mt-1">Senin - Jumat,
+                                            09:00 - 17:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-surface-light dark:bg-background-dark rounded-full flex items-center justify-center text-primary shrink-0">
+                                        <span class="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-text-main dark:text-white text-lg">Email</h4>
+                                        <a class="text-text-muted dark:text-gray-400 mt-1 hover:text-primary transition-colors"
+                                            href="mailto:halo@exofficepro.id">
+                                            halo@exofficepro.id
+                                        </a>
+                                        <br />
+                                        <a class="text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                                            href="mailto:sales@exofficepro.id">
+                                            sales@exofficepro.id
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-80 rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-800 relative z-0 animate-on-scroll delay-500">
+                            <iframe allowfullscreen="" class="absolute inset-0 w-full h-full border-0" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.273663717758!2d106.8099646740974!3d-6.227606660995221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15037d046f3%3A0x6b4f7422026786c4!2sSudirman%20Central%20Business%20District!5e0!3m2!1sen!2sid!4v1709234567890!5m2!1sen!2sid"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full bg-surface-light dark:bg-surface-dark py-12">
+                <div class="max-w-[1280px] mx-auto px-4 md:px-10">
+                    <div
+                        class="bg-primary/5 dark:bg-primary/10 border border-primary/10 rounded-xl p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Ingin melihat kondisi
+                                barang secara langsung?</h3>
+                            <p class="text-text-muted dark:text-gray-400">Jadwalkan kunjungan ke gudang kami untuk
+                                inspeksi fisik furnitur pilihan Anda.</p>
+                        </div>
+                        <button
+                            class="whitespace-nowrap bg-white dark:bg-background-dark text-primary hover:text-primary-dark border border-primary/20 hover:border-primary px-6 py-3 rounded-lg font-bold transition-all shadow-sm">
+                            Jadwalkan Visit
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="bg-surface-light dark:bg-surface-dark border-t border-surface-light dark:border-gray-800 pt-16 pb-8 px-6 lg:px-10">
+            <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-12">
+                <div class="flex flex-col gap-4 max-w-sm">
+                    <div class="flex items-center gap-2 text-primary">
+                        <div class="size-6">
+                            <svg class="w-full h-full" fill="none" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                                    fill="currentColor"></path>
+                                <path clip-rule="evenodd"
+                                    d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main dark:text-white">Nex Store</h3>
+                    </div>
+                    <p class="text-text-muted dark:text-gray-400 text-sm leading-relaxed">
+                        Penyedia solusi furnitur kantor bekas berkualitas premium terpercaya di Indonesia. Kami
+                        berkomitmen pada kualitas, efisiensi biaya, dan keberlanjutan lingkungan.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 flex-1">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold text-text-main dark:text-white mb-1">Perusahaan</h4>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Tentang Kami</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Karir</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Blog</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold text-text-main dark:text-white mb-1">Layanan</h4>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Jual Furnitur</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Sewa Kantor</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Konsultasi Desain</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="font-bold text-text-main dark:text-white mb-1">Bantuan</h4>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">FAQ</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Pengiriman</a>
+                        <a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors"
+                            href="#">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-text-muted dark:text-gray-500">© 2024 Nex Store. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="text-text-muted dark:text-gray-500 hover:text-primary" href="#"><span
+                            class="material-symbols-outlined">public</span></a>
+                    <a class="text-text-muted dark:text-gray-500 hover:text-primary" href="#"><span
+                            class="material-symbols-outlined">photo_camera</span></a>
+                    <a class="text-text-muted dark:text-gray-500 hover:text-primary" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

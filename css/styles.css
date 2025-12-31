@@ -1,0 +1,469 @@
+/* Animation Base Styles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Scale In Animation (useful for images) */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade In (no movement) */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+}
+
+/* --- Walking Animation --- */
+.walker-container {
+  height: 120px;
+  overflow: hidden;
+  /* Animation handled by JS class toggle for performance */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.walker-container.is-walking {
+  opacity: 1;
+  animation: walk-across 15s linear infinite;
+}
+
+.walker {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 60px;
+  height: 108px;
+  z-index: 10;
+  animation: body-bob 0.6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+/* Character Parts - Scaled Down (approx 0.6x) */
+.head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #b86614;
+  border-radius: 8px;
+  z-index: 15;
+}
+
+.body {
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 36px;
+  background-color: #1b140e;
+  border-radius: 5px;
+  z-index: 14;
+}
+
+.leg {
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  width: 7px;
+  height: 36px;
+  background-color: #1b140e;
+  border-radius: 4px;
+  transform-origin: top center;
+}
+
+.leg-left {
+  transform: translateX(-50%);
+  animation: leg-swing 1s linear infinite;
+  z-index: 12;
+}
+
+.leg-right {
+  transform: translateX(-50%);
+  animation: leg-swing 1s linear infinite reverse;
+  z-index: 13;
+  opacity: 0.9;
+}
+
+.arm {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 6px;
+  height: 30px;
+  background-color: #b86614;
+  border-radius: 3px;
+  transform-origin: top center;
+}
+
+.arm-left {
+  transform: translateX(-15px);
+  animation: arm-swing 1s linear infinite reverse;
+  z-index: 13;
+}
+
+.arm-right {
+  transform: translateX(9px);
+  animation: arm-swing 1s linear infinite;
+  z-index: 11;
+  background-color: #8a4d0f;
+}
+
+.shadow {
+  position: absolute;
+  width: 36px;
+  height: 6px;
+  bottom: 8px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  transform-origin: center center;
+  animation: shadow-scale 0.6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+/* Keyframes */
+@keyframes walk-across {
+  0% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes leg-swing {
+  0% {
+    transform: translateX(-50%) rotate(25deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(-25deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(25deg);
+  }
+}
+
+@keyframes arm-swing {
+  0% {
+    transform: translateX(-50%) rotate(-25deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(25deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(-25deg);
+  }
+}
+
+@keyframes body-bob {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes shadow-scale {
+  0% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.25;
+  }
+}
+
+/* Modern Easing for General Animations */
+.animate-on-scroll {
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* =============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================= */
+
+/* Mobile Menu Styling Enhancement */
+.mobile-menu-active {
+  overflow: hidden;
+}
+
+/* Better Touch Targets - Minimum 44px */
+@media (max-width: 767px) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+
+  /* Ensure buttons have enough padding on mobile */
+  button {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Form inputs better sizing */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on input focus */
+  }
+
+  /* Improve header on mobile */
+  header {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Better section padding */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Smaller hero text on mobile */
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Stack buttons vertically on very small screens */
+  .btn-group-mobile {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group-mobile > * {
+    width: 100%;
+  }
+
+  /* Better card spacing */
+  .card-mobile {
+    padding: 16px !important;
+  }
+
+  /* Better footer on mobile */
+  footer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Timeline adjustments for mobile */
+  .timeline-mobile {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+  }
+}
+
+/* Small phones - extra adjustments */
+@media (max-width: 374px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Even smaller padding for very small screens */
+  section,
+  header,
+  footer {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* Landscape mobile - prevent awkward layouts */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Smooth scroll on mobile */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Reduce motion for those who prefer */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Improve tap highlight on mobile */
+@media (hover: none) {
+  a,
+  button {
+    -webkit-tap-highlight-color: rgba(184, 102, 20, 0.2);
+  }
+}
+
+/* Better image handling on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile menu animation improvements */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Safe area padding for notched devices */
+@supports (padding: max(0px)) {
+  header {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  footer {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Grid improvements for mobile */
+@media (max-width: 639px) {
+  .grid-mobile-single {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Better testimonial cards on mobile */
+@media (max-width: 767px) {
+  .testimonial-card {
+    padding: 20px !important;
+  }
+
+  .testimonial-avatar {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+/* Contact form improvements */
+@media (max-width: 767px) {
+  .contact-form {
+    padding: 20px !important;
+  }
+
+  .contact-info-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+
+/* Better CTA sections on mobile */
+@media (max-width: 767px) {
+  .cta-section {
+    padding: 32px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .cta-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Make iframes responsive */
+iframe {
+  max-width: 100%;
+}
+
+/* Better table handling on mobile */
+@media (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #b86614;
+  outline-offset: 2px;
+}
